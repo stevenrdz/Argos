@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   api:{
     /* base : 'https://gestion.promo.ec/promo/', */
-    baseBd: 'localhost:4000/api'
+    baseBd: 'http://localhost:4000/api'
   }
 };
 

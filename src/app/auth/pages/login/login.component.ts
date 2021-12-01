@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(email, password)
     .subscribe(ok => {
       if(ok === true){
-        this.router.navigateByUrl('/home');
+        this.router.navigateByUrl('/dashboard');
       }
       else{
         console.log('error')

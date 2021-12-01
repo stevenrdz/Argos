@@ -24,6 +24,8 @@ export class AuthService {
 
     const url = `${this.baseUrl}/auth/loginadm`;
     const body = { email, password } 
+    console.log(url, body)
+
     return this.http.post<AuthResponse>(url, body)
     .pipe( 
       tap(
@@ -38,15 +40,14 @@ export class AuthService {
         }
       ),
       map(resp => resp.ok),
-      catchError( err => of(err.error.msg))
-      );
+      catchError( err => of(err.error.msg)
+      )
+    );
   }
 
   validarToken(): Observable<boolean>{
     const url = `${this.baseUrl}/auth/renew`;
-    const headers = new HttpHeaders()
-    .set('x-token',
-    localStorage.getItem('token') || '');
+    const headers = new HttpHeaders().set('x-token',localStorage.getItem('token') || '');
 
     return this.http.get<AuthResponse>( url, { headers })
     .pipe(
