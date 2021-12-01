@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
   }
 
   register(){
-    this.router.navigateByUrl('auth');
+    this.router.navigateByUrl('auth/register');
   }
 
 }
