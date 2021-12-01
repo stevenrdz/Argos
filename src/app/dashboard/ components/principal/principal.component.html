@@ -1,0 +1,24 @@
+
+
+<p>principal works!</p>
+
+<div class="">
+    <div class="row">
+      <div class="col-4">
+        <button [routerLink]="['citas']" type="button" class="btn btn-primary">
+            Perfil
+        </button>
+        <br>
+        <button [routerLink]="['datos']" type="button" class="btn btn-primary">
+            Datos
+        </button>
+        <br>
+        <button [routerLink]="['perfil']" type="button" class="btn btn-primary">
+            Citas
+        </button>
+      </div>
+      <div class="col-8">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>

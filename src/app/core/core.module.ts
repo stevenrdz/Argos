@@ -17,7 +17,8 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SidebarComponent
   ]
 })
 export class CoreModule { }
